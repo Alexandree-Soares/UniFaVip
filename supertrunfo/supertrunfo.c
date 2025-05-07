@@ -4,7 +4,7 @@
 int main() {
 
     int numPointTuristic1, populacao1, numPointTuristic2, populacao2;\
-    float pib1, areaEmKm21, pib2, areaEmKm22;
+    float pib1, areaEmKm21, pib2, areaEmKm22, resultadoPopulacionalC1, resultadoPopulacionalC2, resultadoPib1, resultadoPib2;
     char nomeCidade1[30];
     char nomeCidade2[30];
     char letraEstado1;
@@ -53,6 +53,16 @@ int main() {
     scanf("%d", &numPointTuristic2);
     printf("\n\n");
 
+
+    resultadoPopulacionalC1 = (float)populacao1 / areaEmKm21;
+    resultadoPopulacionalC2 = (float)populacao2 / areaEmKm22;
+    resultadoPib1 = (float)pib1 / populacao1;
+    resultadoPib2 = (float)pib2 / populacao2;
+
+
+
+
+
     printf("Informações da carta 1:\n");
     printf("Estado: %c\n", letraEstado1);
     printf("Código: %s\n", codigoCarta1);
@@ -61,6 +71,8 @@ int main() {
     printf("Área: %.2f km2\n", areaEmKm21);
     printf("PIB: %.2f\n", pib1);
     printf("Número de pontos turísticos: %d\n", numPointTuristic1);
+    printf("A densidade populacional é aproximadamente: %.2f habitantes/km2\n", resultadoPopulacionalC1);
+    printf("O PIB per capita é aproximadamente: %.2f\n", resultadoPib1);
     
     printf("\n\n");
 
@@ -72,6 +84,9 @@ int main() {
     printf("Área: %.2f km2\n", areaEmKm22);
     printf("PIB: %.2f\n", pib2);
     printf("Número de pontos turísticos: %d\n", numPointTuristic2);
+    printf("A densidade populacional é aproximadamente: %.2f habitantes/km2\n", resultadoPopulacionalC2);
+    printf("O PIB per capita é aproximadamente: %.2f\n", resultadoPib2);
+    printf("\n\n");
     
     return 0;
     
